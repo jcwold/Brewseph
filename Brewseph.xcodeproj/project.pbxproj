@@ -14,6 +14,7 @@
 		52BE734B1A0B1992006F5595 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE73491A0B1992006F5595 /* LaunchScreen.xib */; };
 		52BE73571A0B1992006F5595 /* BrewsephTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73561A0B1992006F5595 /* BrewsephTests.m */; };
 		52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */; };
+		52BE73651A0B25AC006F5595 /* BWRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73641A0B25AC006F5595 /* BWRecipe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		52BE73561A0B1992006F5595 /* BrewsephTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrewsephTests.m; sourceTree = "<group>"; };
 		52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWRecipeListTableViewController.h; path = ../BWRecipeListTableViewController.h; sourceTree = "<group>"; };
 		52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWRecipeListTableViewController.m; path = ../BWRecipeListTableViewController.m; sourceTree = "<group>"; };
+		52BE73631A0B25AC006F5595 /* BWRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRecipe.h; sourceTree = "<group>"; };
+		52BE73641A0B25AC006F5595 /* BWRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRecipe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */,
 				52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */,
 				52BE73441A0B1992006F5595 /* Main.storyboard */,
+				52BE73631A0B25AC006F5595 /* BWRecipe.h */,
+				52BE73641A0B25AC006F5595 /* BWRecipe.m */,
 				52BE73471A0B1992006F5595 /* Images.xcassets */,
 				52BE73491A0B1992006F5595 /* LaunchScreen.xib */,
 				52BE733A1A0B1992006F5595 /* Supporting Files */,
@@ -221,6 +226,7 @@
 			files = (
 				52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */,
 				52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */,
+				52BE73651A0B25AC006F5595 /* BWRecipe.m in Sources */,
 				52BE733D1A0B1992006F5595 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

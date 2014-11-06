@@ -7,8 +7,11 @@
 //
 
 #import "BWRecipeListTableViewController.h"
+#import "BWRecipe.h"
 
 @interface BWRecipeListTableViewController ()
+
+@property (strong, nonatomic) NSMutableArray* recipes;
 
 @end
 
@@ -16,6 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.recipes = [[NSMutableArray alloc]init];
+    
+    BWRecipe* recipe1 = [[BWRecipe alloc]init];
+    
+    recipe1.name = @"Stout";
+    recipe1.dateCreated = [[NSDate alloc]init];
+    
+    [self.recipes addObject:recipe1];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,24 +47,33 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    
+    
+    
+    return [self.recipes count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    BWRecipe* recipe = self.recipes[indexPath.row];
+    
+    cell.textLabel.text = recipe.name;
+    cell.detailTextLabel.text = recipe.dateCreated.description;
+    
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
