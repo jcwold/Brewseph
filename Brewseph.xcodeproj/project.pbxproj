@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		52BE733D1A0B1992006F5595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE733C1A0B1992006F5595 /* main.m */; };
 		52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE733F1A0B1992006F5595 /* AppDelegate.m */; };
-		52BE73431A0B1992006F5595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73421A0B1992006F5595 /* ViewController.m */; };
 		52BE73461A0B1992006F5595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BE73441A0B1992006F5595 /* Main.storyboard */; };
 		52BE73481A0B1992006F5595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BE73471A0B1992006F5595 /* Images.xcassets */; };
 		52BE734B1A0B1992006F5595 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE73491A0B1992006F5595 /* LaunchScreen.xib */; };
 		52BE73571A0B1992006F5595 /* BrewsephTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73561A0B1992006F5595 /* BrewsephTests.m */; };
+		52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		52BE733C1A0B1992006F5595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52BE733E1A0B1992006F5595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52BE733F1A0B1992006F5595 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		52BE73411A0B1992006F5595 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		52BE73421A0B1992006F5595 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		52BE73451A0B1992006F5595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52BE73471A0B1992006F5595 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		52BE734A1A0B1992006F5595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		52BE73501A0B1992006F5595 /* BrewsephTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewsephTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BE73551A0B1992006F5595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BE73561A0B1992006F5595 /* BrewsephTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrewsephTests.m; sourceTree = "<group>"; };
+		52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWRecipeListTableViewController.h; path = ../BWRecipeListTableViewController.h; sourceTree = "<group>"; };
+		52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWRecipeListTableViewController.m; path = ../BWRecipeListTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 			children = (
 				52BE733E1A0B1992006F5595 /* AppDelegate.h */,
 				52BE733F1A0B1992006F5595 /* AppDelegate.m */,
-				52BE73411A0B1992006F5595 /* ViewController.h */,
-				52BE73421A0B1992006F5595 /* ViewController.m */,
+				52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */,
+				52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */,
 				52BE73441A0B1992006F5595 /* Main.storyboard */,
 				52BE73471A0B1992006F5595 /* Images.xcassets */,
 				52BE73491A0B1992006F5595 /* LaunchScreen.xib */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BE73431A0B1992006F5595 /* ViewController.m in Sources */,
+				52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */,
 				52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */,
 				52BE733D1A0B1992006F5595 /* main.m in Sources */,
 			);

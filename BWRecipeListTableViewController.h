@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BWReciepeListTableViewController.h
 //  Brewseph
 //
 //  Created by John Wold on 11/5/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BWRecipeListTableViewController : UITableViewController
 
 @end
-
