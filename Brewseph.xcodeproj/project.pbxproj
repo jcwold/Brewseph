@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526C2AD41A3003EE00DA7DE4 /* BWRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C2AD31A3003EE00DA7DE4 /* BWRecipeViewController.m */; };
 		52BE733D1A0B1992006F5595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE733C1A0B1992006F5595 /* main.m */; };
 		52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE733F1A0B1992006F5595 /* AppDelegate.m */; };
 		52BE73461A0B1992006F5595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BE73441A0B1992006F5595 /* Main.storyboard */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		526C2AD21A3003EE00DA7DE4 /* BWRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRecipeViewController.h; sourceTree = "<group>"; };
+		526C2AD31A3003EE00DA7DE4 /* BWRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRecipeViewController.m; sourceTree = "<group>"; };
 		52BE73371A0B1992006F5595 /* Brewseph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewseph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BE733B1A0B1992006F5595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BE733C1A0B1992006F5595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */,
 				52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */,
 				52BE73441A0B1992006F5595 /* Main.storyboard */,
+				526C2AD21A3003EE00DA7DE4 /* BWRecipeViewController.h */,
+				526C2AD31A3003EE00DA7DE4 /* BWRecipeViewController.m */,
 				52BE73631A0B25AC006F5595 /* BWRecipe.h */,
 				52BE73641A0B25AC006F5595 /* BWRecipe.m */,
 				52BE73471A0B1992006F5595 /* Images.xcassets */,
@@ -226,6 +231,7 @@
 			files = (
 				52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */,
 				52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */,
+				526C2AD41A3003EE00DA7DE4 /* BWRecipeViewController.m in Sources */,
 				52BE73651A0B25AC006F5595 /* BWRecipe.m in Sources */,
 				52BE733D1A0B1992006F5595 /* main.m in Sources */,
 			);
@@ -418,6 +424,7 @@
 				52BE735C1A0B1992006F5595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52BE735D1A0B1992006F5595 /* Build configuration list for PBXNativeTarget "BrewsephTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				52BE735F1A0B1992006F5595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

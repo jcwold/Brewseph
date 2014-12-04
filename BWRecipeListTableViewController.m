@@ -59,6 +59,9 @@
     return [self.recipes count];
 }
 
+- (IBAction)addPressed:(id)sender {
+    NSLog(@"You pushed the button");
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
