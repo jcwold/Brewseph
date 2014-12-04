@@ -7,9 +7,14 @@
 //
 
 #import "BWRecipeViewController.h"
+#import "BWRecipe.h"
+#import "BWGrains.h"
+#import "BWHops.h"
+#import "BWYeast.h"
 
 @interface BWRecipeViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) BWRecipe *recipe;
 
 @end
 
@@ -19,6 +24,28 @@
     [super viewDidLoad];
     
     self.tableView.dataSource = self;
+    
+    self.recipe = [[BWRecipe alloc]init];
+    self.recipe.name = @"Kolsch";
+    self.recipe.grains = [[NSMutableArray alloc] init];
+    self.recipe.hops = [[NSMutableArray alloc]init];
+    self.recipe.yeast = [[NSMutableArray alloc]init];
+    
+    BWGrains *grains = [[BWGrains alloc]init];
+    BWGrains *oats = [[BWGrains alloc]init];
+    BWHops *hops = [[BWHops alloc]init];
+    BWYeast *yeast = [[BWYeast alloc]init];
+    
+    grains.name = @"Pale";
+    grains.ounces = 88;
+
+    oats.name = @"Oats";
+    oats.ounces = 8;
+    
+    [self.recipe.grains addObject:grains];
+    [self.recipe.grains addObject:oats];
+    
+    
     
     // Do any additional setup after loading the view.
 }
@@ -31,6 +58,20 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
    
+    if (indexPath.section == 0) {
+        BWGrains *currentGrain = [[BWGrains alloc]init];
+        currentGrain = [self.recipe.grains objectAtIndex:indexPath.row];
+        tableCell.textLabel.text = currentGrain.name;
+        tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%d oz", currentGrain.ounces];
+    }
+    
+    else if (indexPath.section == 1) {
+        BWHops *currentHop = [[BWHops alloc]init];
+        currentHop = [self.recipe.hops objectAtIndex:0];
+        tableCell.textLabel.text = currentHop.name;
+    }
+    
+    
     return tableCell;
 }
 
@@ -55,7 +96,16 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    if (section == 0) {
+        return [self.recipe.grains count];
+    }
+    else if (section == 1){
+        return [self.recipe.hops count];
+    }
+    else {
+        return [self.recipe.yeast count];
+    }
+    
 }
 
 /*

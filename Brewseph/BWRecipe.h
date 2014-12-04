@@ -12,5 +12,9 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSDate *dateCreated;
+@property (strong, nonatomic) NSMutableArray *hops;
+@property (strong, nonatomic) NSMutableArray *grains;
+@property (strong, nonatomic) NSMutableArray *yeast;
+
 
 @end
