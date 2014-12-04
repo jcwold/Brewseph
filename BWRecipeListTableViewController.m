@@ -65,8 +65,9 @@
     
     BWRecipe* recipe = self.recipes[indexPath.row];
     
+   
+    
     cell.textLabel.text = recipe.name;
-    cell.detailTextLabel.text = recipe.dateCreated.description;
     
     
     // Configure the cell...
