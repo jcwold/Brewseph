@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="820" y="-37"/>
         </scene>
-        <!--Recipe List Table View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="yB6-eH-O7e">
             <objects>
-                <viewController id="rXs-Nm-dAt" customClass="BWRecipeListTableViewController" sceneMemberID="viewController">
+                <viewController id="rXs-Nm-dAt" customClass="BWRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l2P-qd-JYi"/>
                         <viewControllerLayoutGuide type="bottom" id="9nf-lV-Yhj"/>
@@ -132,6 +132,9 @@
                             <constraint firstItem="cjR-09-dmg" firstAttribute="top" secondItem="l2P-qd-JYi" secondAttribute="bottom" symbolic="YES" id="ggb-q4-UEF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MmB-1d-lFZ" id="v4C-Ah-e5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCE-Wz-0Zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

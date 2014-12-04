@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWRecipeViewController : UIViewController
+@interface BWRecipeViewController : UIViewController <UITableViewDataSource>
+
 
 @end
