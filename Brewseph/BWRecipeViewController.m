@@ -62,9 +62,10 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-   
+    UITableViewCell *tableCell;
+    
     if (indexPath.section == 0) {
+        tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         BWGrains *currentGrain = [[BWGrains alloc]init];
         currentGrain = [self.recipe.grains objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentGrain.name;
@@ -72,6 +73,7 @@
     }
     
     else if (indexPath.section == 1) {
+        tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         BWHops *currentHop = [[BWHops alloc]init];
         currentHop = [self.recipe.hops objectAtIndex:0];
         tableCell.textLabel.text = currentHop.name;
@@ -79,12 +81,11 @@
     }
     
     else if (indexPath.section == 2) {
+        tableCell =[self.tableView dequeueReusableCellWithIdentifier:@"yeastCell" forIndexPath:indexPath];
         BWYeast *currentYeast = [[BWYeast alloc]init];
         currentYeast = [self.recipe.yeast objectAtIndex:0];
         tableCell.textLabel.text = currentYeast.name;
     }
-    
-    
     
     return tableCell;
 }
