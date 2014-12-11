@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWRecipeListTableViewController : UITableViewController
+@interface BWRecipeListTableViewController : UIViewController
 
 @end
