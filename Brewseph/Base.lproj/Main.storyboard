@@ -105,11 +105,8 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-1d-lFZ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="0zv-0Z-T9E"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="b69-Y1-MdE" detailTextLabel="8wx-Ay-rdH" style="IBUITableViewCellStyleValue1" id="mIH-qv-9SS">
                                         <rect key="frame" x="0.0" y="0.0" width="611" height="44"/>
@@ -156,6 +153,7 @@
                             <constraint firstItem="MmB-1d-lFZ" firstAttribute="leading" secondItem="LEd-fB-P8j" secondAttribute="leading" id="8Qi-ep-KZ5"/>
                             <constraint firstItem="cjR-09-dmg" firstAttribute="leading" secondItem="LEd-fB-P8j" secondAttribute="leading" id="KWv-bb-IDG"/>
                             <constraint firstAttribute="trailing" secondItem="cjR-09-dmg" secondAttribute="trailing" id="Moi-Iu-fca"/>
+                            <constraint firstItem="9nf-lV-Yhj" firstAttribute="top" secondItem="MmB-1d-lFZ" secondAttribute="bottom" id="ZzQ-yd-qDh"/>
                             <constraint firstItem="MmB-1d-lFZ" firstAttribute="top" secondItem="cjR-09-dmg" secondAttribute="bottom" id="dna-rb-5a8"/>
                             <constraint firstItem="cjR-09-dmg" firstAttribute="top" secondItem="l2P-qd-JYi" secondAttribute="bottom" symbolic="YES" id="ggb-q4-UEF"/>
                         </constraints>
