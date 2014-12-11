@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWRecipeViewController : UIViewController <UITableViewDataSource>
+@interface BWRecipeViewController : UIViewController <UITableViewDataSource, UIActionSheetDelegate>
 
 
 @end

@@ -160,4 +160,12 @@
 }
 */
 
+- (IBAction)addPressed:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles: @"Grains", @"Hops", @"Yeast", nil];
+    
+    [actionSheet showInView:self.view];
+    
+                                  
+    
+}
 @end
