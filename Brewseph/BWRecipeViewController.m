@@ -31,19 +31,25 @@
     self.recipe.hops = [[NSMutableArray alloc]init];
     self.recipe.yeast = [[NSMutableArray alloc]init];
     
-    BWGrains *grains = [[BWGrains alloc]init];
+    BWGrains *pale = [[BWGrains alloc]init];
     BWGrains *oats = [[BWGrains alloc]init];
-    BWHops *hops = [[BWHops alloc]init];
-    BWYeast *yeast = [[BWYeast alloc]init];
-    
-    grains.name = @"Pale";
-    grains.ounces = 88;
-
+    pale.name = @"Pale";
+    pale.ounces = 88;
     oats.name = @"Oats";
     oats.ounces = 8;
     
-    [self.recipe.grains addObject:grains];
+    
+    BWHops *centennial = [[BWHops alloc]init];
+    centennial.name = @"Centennial";
+    centennial.ounces = 1;
+    
+    BWYeast *brewersYeast = [[BWYeast alloc]init];
+    brewersYeast.name = @"Brewer's Yeast";
+    
+    [self.recipe.grains addObject:pale];
     [self.recipe.grains addObject:oats];
+    [self.recipe.hops addObject:centennial];
+    [self.recipe.yeast addObject:brewersYeast];
     
     
     
@@ -69,7 +75,15 @@
         BWHops *currentHop = [[BWHops alloc]init];
         currentHop = [self.recipe.hops objectAtIndex:0];
         tableCell.textLabel.text = currentHop.name;
+        tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%f oz", currentHop.ounces];
     }
+    
+    else if (indexPath.section == 2) {
+        BWYeast *currentYeast = [[BWYeast alloc]init];
+        currentYeast = [self.recipe.yeast objectAtIndex:0];
+        tableCell.textLabel.text = currentYeast.name;
+    }
+    
     
     
     return tableCell;
