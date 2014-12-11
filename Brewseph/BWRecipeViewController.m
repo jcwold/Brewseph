@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) BWRecipe *recipe;
 
+
 @end
 
 @implementation BWRecipeViewController
@@ -34,9 +35,9 @@
     BWGrains *pale = [[BWGrains alloc]init];
     BWGrains *oats = [[BWGrains alloc]init];
     pale.name = @"Pale";
-    pale.ounces = 88;
+    pale.ounces = 32;
     oats.name = @"Oats";
-    oats.ounces = 8;
+    oats.ounces = 34;
     
     
     BWHops *centennial = [[BWHops alloc]init];
@@ -69,7 +70,7 @@
         BWGrains *currentGrain = [[BWGrains alloc]init];
         currentGrain = [self.recipe.grains objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentGrain.name;
-        tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%d oz", currentGrain.ounces];
+        tableCell.detailTextLabel.text = [self formatGrainWeight:currentGrain.ounces];
     }
     
     else if (indexPath.section == 1) {
@@ -88,6 +89,32 @@
     }
     
     return tableCell;
+}
+
+- (NSString *)formatGrainWeight:(int)weight
+{
+    NSString *stringWeight;
+    
+    int pounds = weight/16;
+    int ounces = weight%16;
+    
+    if (pounds > 0 && ounces != 0) {
+        stringWeight = [NSString stringWithFormat:@"%i lbs %i oz", pounds, ounces];
+        return stringWeight;
+        
+    }
+    else if (pounds > 0 ) {
+        stringWeight = [NSString stringWithFormat:@"%i lbs", pounds];
+        return stringWeight;
+
+    }
+    
+    else {
+        stringWeight = [NSString stringWithFormat:@"%i oz", ounces];
+        return stringWeight;
+    }
+    
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
