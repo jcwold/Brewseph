@@ -168,4 +168,21 @@
                                   
     
 }
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    [self performSegueWithIdentifier:@"ingredientSegue" sender:nil];
+    
+    if (buttonIndex == 0) {
+        NSLog(@"You want to add a grain ingredient");
+    }
+    if (buttonIndex == 1) {
+        NSLog(@"You want to add a hop ingredient");
+    }
+    if (buttonIndex == 2) {
+        NSLog(@"You want to add a yeast ingredient");
+    }
+}
+
+
 @end
