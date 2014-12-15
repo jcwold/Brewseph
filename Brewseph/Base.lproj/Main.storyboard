@@ -180,7 +180,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THG-5f-kCw">
-                                <rect key="frame" x="0.0" y="181" width="600" height="162"/>
+                                <rect key="frame" x="0.0" y="181" width="400" height="162"/>
                                 <connections>
                                     <outlet property="dataSource" destination="v75-B6-cOc" id="QSq-Lw-rNS"/>
                                     <outlet property="delegate" destination="v75-B6-cOc" id="21e-Su-P8E"/>

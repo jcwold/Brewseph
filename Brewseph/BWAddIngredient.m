@@ -19,6 +19,7 @@
     
     
     self.ounces = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16", nil];
+    self.fractions = [[NSMutableArray alloc] initWithObjects:@"1/4",@"1/2",@"3/4", nil];
 
     
     // Do any additional setup after loading the view.
@@ -31,17 +32,40 @@
 
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 16;
+    if (component == 0) {
+        return 2;
+    }
+    else if (component == 1) {
+        return [self.ounces count];
+    }
+    else {
+        return [self.fractions count];
+    }
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
+    return 3;
     
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    NSString *title = [self.ounces objectAtIndex:row];
-    return title;
+    
+    if (component == 0) {
+        if (row == 0) {
+            return @"Ounces";
+        }
+        else {
+            return @"Pounds";
+        }
+        
+    }
+    else if (component == 1) {
+        return [self.ounces objectAtIndex:row];
+    }
+    else {
+        return [self.fractions objectAtIndex:row];
+    }
+    
 }
 /*
 #pragma mark - Navigation
