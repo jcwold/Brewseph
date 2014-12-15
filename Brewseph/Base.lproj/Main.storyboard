@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1480" y="-37"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Ingredient-->
         <scene sceneID="oem-5l-u8m">
             <objects>
-                <viewController id="v75-B6-cOc" sceneMemberID="viewController">
+                <viewController id="v75-B6-cOc" customClass="BWAddIngredient" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dVn-9I-bjp"/>
                         <viewControllerLayoutGuide type="bottom" id="VP2-Ys-WPz"/>
@@ -178,8 +178,20 @@
                     <view key="view" contentMode="scaleToFill" id="q4O-i0-7is">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THG-5f-kCw">
+                                <rect key="frame" x="0.0" y="181" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="v75-B6-cOc" id="QSq-Lw-rNS"/>
+                                    <outlet property="delegate" destination="v75-B6-cOc" id="21e-Su-P8E"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ouncesPicker" destination="THG-5f-kCw" id="c8o-Hf-Ukp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FP-fC-50O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
