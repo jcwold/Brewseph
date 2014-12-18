@@ -20,7 +20,7 @@
     
     self.ounces = [[NSMutableArray alloc] initWithObjects:@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16, nil];
     self.fractions = [[NSMutableArray alloc] initWithObjects:@"1/4",@"1/2",@"3/4", nil];
-    self.addIngredientTitle.title = @"Add Grains";
+    self.addIngredientTitle.title = [NSString stringWithFormat:@"Add %@", self.type];
     
     // Do any additional setup after loading the view.
 }
@@ -66,6 +66,9 @@
         return [self.fractions objectAtIndex:row];
     }
     
+}
+- (IBAction)cancelPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 /*
 #pragma mark - Navigation

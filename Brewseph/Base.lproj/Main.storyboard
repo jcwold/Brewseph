@@ -196,7 +196,11 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="gSC-Xs-iwF">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MEY-u0-YXD"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="MEY-u0-YXD">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="v75-B6-cOc" id="qE2-AV-wBu"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8VL-Jg-GJc"/>
                                     </navigationItem>
                                 </items>

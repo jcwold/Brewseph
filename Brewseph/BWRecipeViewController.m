@@ -11,6 +11,7 @@
 #import "BWGrains.h"
 #import "BWHops.h"
 #import "BWYeast.h"
+#import "BWAddIngredientViewController.h"
 
 @interface BWRecipeViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -150,15 +151,26 @@
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    BWAddIngredientViewController *vc = [segue destinationViewController];
+    vc.recipe = self.recipe;
+    NSNumber *buttonIndexNumber = sender;
+    int buttonIndex = buttonIndexNumber.intValue;
+    if (buttonIndex == 0) {
+        NSLog(@"You want to add a grain ingredient");
+        vc.type = @"Grain";
+    }
+    if (buttonIndex == 1) {
+        NSLog(@"You want to add a hop ingredient");
+        vc.type = @"Hop";
+    }
+    if (buttonIndex == 2) {
+        NSLog(@"You want to add a yeast ingredient");
+        vc.type = @"Yeast";
+    }
+    
 }
-*/
+
 
 - (IBAction)addPressed:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles: @"Grains", @"Hops", @"Yeast", nil];
@@ -171,17 +183,9 @@
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    [self performSegueWithIdentifier:@"ingredientSegue" sender:nil];
+    [self performSegueWithIdentifier:@"ingredientSegue" sender:@(buttonIndex)];
     
-    if (buttonIndex == 0) {
-        NSLog(@"You want to add a grain ingredient");
-    }
-    if (buttonIndex == 1) {
-        NSLog(@"You want to add a hop ingredient");
-    }
-    if (buttonIndex == 2) {
-        NSLog(@"You want to add a yeast ingredient");
-    }
+
 }
 
 
