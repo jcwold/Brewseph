@@ -12,5 +12,6 @@
 @property (strong, nonatomic) NSMutableArray *ounces;
 @property (strong, nonatomic) NSMutableArray *fractions;
 @property (strong, nonatomic) IBOutlet UIPickerView *ouncesPicker;
+@property (strong, nonatomic) IBOutlet UINavigationItem *addIngredientTitle;
 
 @end

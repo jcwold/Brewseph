@@ -18,9 +18,9 @@
     [super viewDidLoad];
     
     
-    self.ounces = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16", nil];
+    self.ounces = [[NSMutableArray alloc] initWithObjects:@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16, nil];
     self.fractions = [[NSMutableArray alloc] initWithObjects:@"1/4",@"1/2",@"3/4", nil];
-
+    self.addIngredientTitle.title = @"Add Grains";
     
     // Do any additional setup after loading the view.
 }
@@ -60,7 +60,7 @@
         
     }
     else if (component == 1) {
-        return [self.ounces objectAtIndex:row];
+        return [NSString stringWithFormat:@"%@ oz", [self.ounces objectAtIndex:row]];
     }
     else {
         return [self.fractions objectAtIndex:row];
