@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWAddIngredient : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface BWAddIngredientViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 @property (strong, nonatomic) NSMutableArray *ounces;
 @property (strong, nonatomic) NSMutableArray *fractions;
 @property (strong, nonatomic) IBOutlet UIPickerView *ouncesPicker;

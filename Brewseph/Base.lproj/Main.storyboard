@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="1480" y="-37"/>
         </scene>
-        <!--Add Ingredient-->
+        <!--Add Ingredient View Controller-->
         <scene sceneID="oem-5l-u8m">
             <objects>
-                <viewController id="v75-B6-cOc" customClass="BWAddIngredient" sceneMemberID="viewController">
+                <viewController id="v75-B6-cOc" customClass="BWAddIngredientViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dVn-9I-bjp"/>
                         <viewControllerLayoutGuide type="bottom" id="VP2-Ys-WPz"/>

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Brewseph World Industries. All rights reserved.
 //
 
-#import "BWAddIngredient.h"
+#import "BWAddIngredientViewController.h"
 
-@interface BWAddIngredient ()
+@interface BWAddIngredientViewController ()
 
 @end
 
-@implementation BWAddIngredient
+@implementation BWAddIngredientViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

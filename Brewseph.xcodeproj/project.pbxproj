@@ -11,7 +11,7 @@
 		526C2AD71A300DC800DA7DE4 /* BWHops.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C2AD61A300DC800DA7DE4 /* BWHops.m */; };
 		526C2ADA1A300DD500DA7DE4 /* BWGrains.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C2AD91A300DD500DA7DE4 /* BWGrains.m */; };
 		526C2ADD1A300DE700DA7DE4 /* BWYeast.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C2ADC1A300DE700DA7DE4 /* BWYeast.m */; };
-		526C2AE01A3D6F3B00DA7DE4 /* BWAddIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C2ADF1A3D6F3B00DA7DE4 /* BWAddIngredient.m */; };
+		526C2AE01A3D6F3B00DA7DE4 /* BWAddIngredientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 526C2ADF1A3D6F3B00DA7DE4 /* BWAddIngredientViewController.m */; };
 		52BE733D1A0B1992006F5595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE733C1A0B1992006F5595 /* main.m */; };
 		52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE733F1A0B1992006F5595 /* AppDelegate.m */; };
 		52BE73461A0B1992006F5595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BE73441A0B1992006F5595 /* Main.storyboard */; };
@@ -41,8 +41,8 @@
 		526C2AD91A300DD500DA7DE4 /* BWGrains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWGrains.m; sourceTree = "<group>"; };
 		526C2ADB1A300DE700DA7DE4 /* BWYeast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWYeast.h; sourceTree = "<group>"; };
 		526C2ADC1A300DE700DA7DE4 /* BWYeast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWYeast.m; sourceTree = "<group>"; };
-		526C2ADE1A3D6F3B00DA7DE4 /* BWAddIngredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddIngredient.h; sourceTree = "<group>"; };
-		526C2ADF1A3D6F3B00DA7DE4 /* BWAddIngredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddIngredient.m; sourceTree = "<group>"; };
+		526C2ADE1A3D6F3B00DA7DE4 /* BWAddIngredientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWAddIngredientViewController.h; sourceTree = "<group>"; };
+		526C2ADF1A3D6F3B00DA7DE4 /* BWAddIngredientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWAddIngredientViewController.m; sourceTree = "<group>"; };
 		52BE73371A0B1992006F5595 /* Brewseph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brewseph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BE733B1A0B1992006F5595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BE733C1A0B1992006F5595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,8 +104,8 @@
 				52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */,
 				52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */,
 				52BE73441A0B1992006F5595 /* Main.storyboard */,
-				526C2ADE1A3D6F3B00DA7DE4 /* BWAddIngredient.h */,
-				526C2ADF1A3D6F3B00DA7DE4 /* BWAddIngredient.m */,
+				526C2ADE1A3D6F3B00DA7DE4 /* BWAddIngredientViewController.h */,
+				526C2ADF1A3D6F3B00DA7DE4 /* BWAddIngredientViewController.m */,
 				526C2AD21A3003EE00DA7DE4 /* BWRecipeViewController.h */,
 				526C2AD31A3003EE00DA7DE4 /* BWRecipeViewController.m */,
 				52BE73631A0B25AC006F5595 /* BWRecipe.h */,
@@ -252,7 +252,7 @@
 				526C2ADA1A300DD500DA7DE4 /* BWGrains.m in Sources */,
 				52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */,
 				52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */,
-				526C2AE01A3D6F3B00DA7DE4 /* BWAddIngredient.m in Sources */,
+				526C2AE01A3D6F3B00DA7DE4 /* BWAddIngredientViewController.m in Sources */,
 				526C2ADD1A300DE700DA7DE4 /* BWYeast.m in Sources */,
 				526C2AD71A300DC800DA7DE4 /* BWHops.m in Sources */,
 				526C2AD41A3003EE00DA7DE4 /* BWRecipeViewController.m in Sources */,
