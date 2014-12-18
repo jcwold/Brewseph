@@ -201,7 +201,11 @@
                                                 <action selector="cancelPressed:" destination="v75-B6-cOc" id="qE2-AV-wBu"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8VL-Jg-GJc"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8VL-Jg-GJc">
+                                            <connections>
+                                                <action selector="savePressed:" destination="v75-B6-cOc" id="nNu-9R-ocm"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -220,6 +224,7 @@
                     </view>
                     <connections>
                         <outlet property="addIngredientTitle" destination="gSC-Xs-iwF" id="XhE-DL-JHg"/>
+                        <outlet property="nameTextField" destination="aC2-CW-r1m" id="LKV-me-3HZ"/>
                         <outlet property="ouncesPicker" destination="THG-5f-kCw" id="c8o-Hf-Ukp"/>
                     </connections>
                 </viewController>

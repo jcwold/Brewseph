@@ -7,8 +7,12 @@
 //
 
 #import "BWAddIngredientViewController.h"
+#import "BWGrains.h"
+#import "BWHops.h"
+#import "BWYeast.h"
 
 @interface BWAddIngredientViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end
 
@@ -65,6 +69,14 @@
     else {
         return [self.fractions objectAtIndex:row];
     }
+    
+}
+- (IBAction)savePressed:(id)sender {
+    BWGrains *grain = [[BWGrains alloc]init];
+    grain.name = self.nameTextField.text;
+    grain.ounces = 16;
+    [self.recipe.grains addObject:grain];
+    [self dismissViewControllerAnimated:YES completion:^{}];
     
 }
 - (IBAction)cancelPressed:(id)sender {

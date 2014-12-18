@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ViewDidLoad");
     
     self.tableView.dataSource = self;
     
@@ -57,6 +58,11 @@
     
     // Do any additional setup after loading the view.
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
