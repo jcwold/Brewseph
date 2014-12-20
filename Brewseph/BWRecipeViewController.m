@@ -83,7 +83,7 @@
     else if (indexPath.section == 1) {
         tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         BWHops *currentHop = [[BWHops alloc]init];
-        currentHop = [self.recipe.hops objectAtIndex:0];
+        currentHop = [self.recipe.hops objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentHop.name;
         tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%f oz", currentHop.ounces];
     }
@@ -91,7 +91,7 @@
     else if (indexPath.section == 2) {
         tableCell =[self.tableView dequeueReusableCellWithIdentifier:@"yeastCell" forIndexPath:indexPath];
         BWYeast *currentYeast = [[BWYeast alloc]init];
-        currentYeast = [self.recipe.yeast objectAtIndex:0];
+        currentYeast = [self.recipe.yeast objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentYeast.name;
     }
     

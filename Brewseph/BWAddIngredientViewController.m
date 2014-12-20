@@ -72,11 +72,27 @@
     
 }
 - (IBAction)savePressed:(id)sender {
-    BWGrains *grain = [[BWGrains alloc]init];
-    grain.name = self.nameTextField.text;
-    grain.ounces = 16;
-    [self.recipe.grains addObject:grain];
-    [self dismissViewControllerAnimated:YES completion:^{}];
+    
+    if ([self.type isEqual:@"Grain"]) {
+        BWGrains *grain = [[BWGrains alloc]init];
+        grain.name = self.nameTextField.text;
+        grain.ounces = 16;
+        [self.recipe.grains addObject:grain];
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
+    else if ([self.type isEqual:@"Hop"]) {
+        BWHops *hop = [[BWHops alloc]init];
+        hop.name = self.nameTextField.text;
+        hop.ounces = 16;
+        [self.recipe.hops addObject:hop];
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
+    else if ([self.type isEqual:@"Yeast" ]) {
+        BWYeast *yeast = [[BWYeast alloc]init];
+        yeast.name = self.nameTextField.text;
+        [self.recipe.yeast addObject:yeast];
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
     
 }
 - (IBAction)cancelPressed:(id)sender {
