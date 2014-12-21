@@ -13,6 +13,10 @@
 
 @interface BWAddIngredientViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) BWGrains *grain;
+@property (strong, nonatomic) BWHops *hop;
+@property (strong, nonatomic) BWYeast *yeast;
+@property (strong, nonatomic) NSNumber *weightSelection;
 
 @end
 
@@ -21,6 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.grain = [[BWGrains alloc]init];
+    self.hop = [[BWHops alloc]init];
+    self.yeast = [[BWYeast alloc]init];
     
     self.ounces = [[NSMutableArray alloc] initWithObjects:@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16, nil];
     self.fractions = [[NSMutableArray alloc] initWithObjects:@"1/4",@"1/2",@"3/4", nil];
@@ -71,26 +78,30 @@
     }
     
 }
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+    self.weightSelection = [self.ounces objectAtIndex:row];
+    
+}
 - (IBAction)savePressed:(id)sender {
     
     if ([self.type isEqual:@"Grain"]) {
-        BWGrains *grain = [[BWGrains alloc]init];
-        grain.name = self.nameTextField.text;
-        grain.ounces = 16;
-        [self.recipe.grains addObject:grain];
+        
+        self.grain.name = self.nameTextField.text;
+        self.grain.ounces = [self.weightSelection intValue];
+        [self.recipe.grains addObject:self.grain];
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
     else if ([self.type isEqual:@"Hop"]) {
-        BWHops *hop = [[BWHops alloc]init];
-        hop.name = self.nameTextField.text;
-        hop.ounces = 16;
-        [self.recipe.hops addObject:hop];
+        self.hop.name = self.nameTextField.text;
+        self.hop.ounces = [self.weightSelection floatValue];
+        [self.recipe.hops addObject:self.hop];
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
     else if ([self.type isEqual:@"Yeast" ]) {
-        BWYeast *yeast = [[BWYeast alloc]init];
-        yeast.name = self.nameTextField.text;
-        [self.recipe.yeast addObject:yeast];
+        self.yeast.name = self.nameTextField.text;
+        [self.recipe.yeast addObject:self.yeast];
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
     

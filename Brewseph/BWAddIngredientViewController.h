@@ -17,4 +17,5 @@
 @property (strong, nonatomic) BWRecipe *recipe;
 @property (strong, nonatomic) NSString *type;
 
+
 @end
