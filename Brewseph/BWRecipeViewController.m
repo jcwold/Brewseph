@@ -188,9 +188,13 @@
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        [actionSheet dismissWithClickedButtonIndex: actionSheet.cancelButtonIndex animated:YES];
+    }
     
-    [self performSegueWithIdentifier:@"ingredientSegue" sender:@(buttonIndex)];
-    
+    else {
+        [self performSegueWithIdentifier:@"ingredientSegue" sender:@(buttonIndex)];
+    }
 
 }
 

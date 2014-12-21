@@ -30,7 +30,7 @@
     self.yeast = [[BWYeast alloc]init];
     
     self.ounces = [[NSMutableArray alloc] initWithObjects:@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16, nil];
-    self.fractions = [[NSMutableArray alloc] initWithObjects:@"1/4",@"1/2",@"3/4", nil];
+    self.fractions = [[NSMutableArray alloc] initWithObjects:@"-", [NSString stringWithFormat:@"%C",0x00215b], [NSString stringWithFormat:@"%C",0x002153],[NSString stringWithFormat:@"%C",0x00bc],[NSString stringWithFormat:@"%C",0x00bd],[NSString stringWithFormat:@"%C",0x002154],[NSString stringWithFormat:@"%C",0x00be], nil];
     self.addIngredientTitle.title = [NSString stringWithFormat:@"Add %@", self.type];
     
     // Do any additional setup after loading the view.
@@ -44,9 +44,6 @@
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == 0) {
-        return 2;
-    }
-    else if (component == 1) {
         return [self.ounces count];
     }
     else {
@@ -55,22 +52,14 @@
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 3;
+    return 2;
     
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
+  
     if (component == 0) {
-        if (row == 0) {
-            return @"Ounces";
-        }
-        else {
-            return @"Pounds";
-        }
-        
-    }
-    else if (component == 1) {
         return [NSString stringWithFormat:@"%@ oz", [self.ounces objectAtIndex:row]];
     }
     else {
