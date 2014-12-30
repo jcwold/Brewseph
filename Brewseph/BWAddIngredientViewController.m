@@ -16,7 +16,6 @@
 @property (strong, nonatomic) BWGrains *grain;
 @property (strong, nonatomic) BWHops *hop;
 @property (strong, nonatomic) BWYeast *yeast;
-@property (strong, nonatomic) NSNumber *weightSelection;
 @property (strong, nonatomic) NSMutableArray *fractionSymbols;
 @property (strong, nonatomic) NSMutableArray *fractions;
 @property (strong, nonatomic) NSMutableArray *ounces;
@@ -94,13 +93,6 @@
     
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-    self.weightSelection = [self.ounces objectAtIndex:row];
-    
-    NSLog(@"%@", [self.ounces objectAtIndex:row]);
-    
-}
 - (IBAction)savePressed:(id)sender {
     
     NSInteger pickerSelection = 0;
