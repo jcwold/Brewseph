@@ -28,6 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if ([self.type isEqualToString:@"Yeast"]) {
+        self.ouncesPicker.hidden = YES;
+    }
+    
     self.grain = [[BWGrains alloc]init];
     self.hop = [[BWHops alloc]init];
     self.yeast = [[BWYeast alloc]init];

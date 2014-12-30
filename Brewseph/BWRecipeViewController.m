@@ -186,6 +186,10 @@
                                   
     
 }
+- (IBAction)cancelPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
+
+}
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == actionSheet.cancelButtonIndex) {
