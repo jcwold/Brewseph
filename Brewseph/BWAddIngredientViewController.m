@@ -30,7 +30,7 @@
     self.yeast = [[BWYeast alloc]init];
     
     self.ounces = [[NSMutableArray alloc] initWithObjects:@1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16, nil];
-    self.fractions = [[NSMutableArray alloc] initWithObjects:@"-", [NSString stringWithFormat:@"%C",0x00215b], [NSString stringWithFormat:@"%C",0x002153],[NSString stringWithFormat:@"%C",0x00bc],[NSString stringWithFormat:@"%C",0x00bd],[NSString stringWithFormat:@"%C",0x002154],[NSString stringWithFormat:@"%C",0x00be], nil];
+    self.fractionSymbols = [[NSMutableArray alloc] initWithObjects:@"-", [NSString stringWithFormat:@"%C",0x00215b], [NSString stringWithFormat:@"%C",0x002153],[NSString stringWithFormat:@"%C",0x00bc],[NSString stringWithFormat:@"%C",0x00bd],[NSString stringWithFormat:@"%C",0x002154],[NSString stringWithFormat:@"%C",0x00be], nil];
     self.addIngredientTitle.title = [NSString stringWithFormat:@"Add %@", self.type];
     
     // Do any additional setup after loading the view.
@@ -47,7 +47,7 @@
         return [self.ounces count];
     }
     else {
-        return [self.fractions count];
+        return [self.fractionSymbols count];
     }
 }
 
@@ -63,7 +63,7 @@
         return [NSString stringWithFormat:@"%@ oz", [self.ounces objectAtIndex:row]];
     }
     else {
-        return [self.fractions objectAtIndex:row];
+        return [self.fractionSymbols objectAtIndex:row];
     }
     
 }
@@ -72,13 +72,15 @@
     
     self.weightSelection = [self.ounces objectAtIndex:row];
     
+    NSLog(@"%@", [self.ounces objectAtIndex:row]);
+    
 }
 - (IBAction)savePressed:(id)sender {
     
     if ([self.type isEqual:@"Grain"]) {
         
         self.grain.name = self.nameTextField.text;
-        self.grain.ounces = [self.weightSelection intValue];
+        self.grain.ounces = [self.ouncesPicker selectedRowInComponent:0];
         [self.recipe.grains addObject:self.grain];
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
