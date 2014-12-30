@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Grain" representedClassName="Grain" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ounces" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="grains" inverseEntity="Recipe" syncable="YES"/>
+    </entity>
+    <entity name="Hop" representedClassName="Hop" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ounces" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="hops" inverseEntity="Recipe" syncable="YES"/>
+    </entity>
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="grains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grain" inverseName="recipe" inverseEntity="Grain" syncable="YES"/>
+        <relationship name="hops" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hop" inverseName="recipe" inverseEntity="Hop" syncable="YES"/>
+        <relationship name="yeasts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Yeast" inverseName="recipe" inverseEntity="Yeast" syncable="YES"/>
+    </entity>
+    <entity name="Yeast" representedClassName="Yeast" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="yeasts" inverseEntity="Recipe" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Recipe" positionX="-74" positionY="-244" width="128" height="118"/>
+        <element name="Hop" positionX="-90" positionY="12" width="128" height="105"/>
+        <element name="Grain" positionX="-360" positionY="-36" width="128" height="90"/>
+        <element name="Yeast" positionX="142" positionY="-1" width="128" height="73"/>
+    </elements>
+</model>
