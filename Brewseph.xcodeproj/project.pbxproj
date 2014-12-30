@@ -20,6 +20,7 @@
 		52BE73571A0B1992006F5595 /* BrewsephTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73561A0B1992006F5595 /* BrewsephTests.m */; };
 		52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */; };
 		52BE73651A0B25AC006F5595 /* BWRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73641A0B25AC006F5595 /* BWRecipe.m */; };
+		881918091A524D5A00F84690 /* recipes.png in Resources */ = {isa = PBXBuildFile; fileRef = 881918081A524D5A00F84690 /* recipes.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		52BE73611A0B201A006F5595 /* BWRecipeListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWRecipeListTableViewController.m; path = ../BWRecipeListTableViewController.m; sourceTree = "<group>"; };
 		52BE73631A0B25AC006F5595 /* BWRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWRecipe.h; sourceTree = "<group>"; };
 		52BE73641A0B25AC006F5595 /* BWRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRecipe.m; sourceTree = "<group>"; };
+		881918081A524D5A00F84690 /* recipes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipes.png; path = Images/recipes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		52BE73391A0B1992006F5595 /* Brewseph */ = {
 			isa = PBXGroup;
 			children = (
+				881918071A524D4C00F84690 /* Images */,
 				52BE733E1A0B1992006F5595 /* AppDelegate.h */,
 				52BE733F1A0B1992006F5595 /* AppDelegate.m */,
 				52BE73601A0B201A006F5595 /* BWRecipeListTableViewController.h */,
@@ -147,6 +150,14 @@
 				52BE73551A0B1992006F5595 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		881918071A524D4C00F84690 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				881918081A524D5A00F84690 /* recipes.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BE73461A0B1992006F5595 /* Main.storyboard in Resources */,
+				881918091A524D5A00F84690 /* recipes.png in Resources */,
 				52BE734B1A0B1992006F5595 /* LaunchScreen.xib in Resources */,
 				52BE73481A0B1992006F5595 /* Images.xcassets in Resources */,
 			);
