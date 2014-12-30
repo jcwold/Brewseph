@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KnU-Nm-vpw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KnU-Nm-vpw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,6 +17,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="KPY-Ws-iQN" kind="relationship" relationship="viewControllers" id="S3x-t3-YCR"/>
+                        <segue destination="979-Ck-lD2" kind="relationship" relationship="viewControllers" id="vvm-Pv-8aW"/>
+                        <segue destination="v6j-Up-QJG" kind="relationship" relationship="viewControllers" id="Obh-2R-EA9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVw-fD-4Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,11 +77,49 @@
                             <constraint firstItem="sEo-xP-0jO" firstAttribute="leading" secondItem="6S1-QK-Bcm" secondAttribute="leading" id="tXR-xP-U1K"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recipes" id="aKH-0N-X1X"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="recipes.png" id="aKH-0N-X1X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDf-WT-Hpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="56"/>
+        </scene>
+        <!--Session-->
+        <scene sceneID="g5s-XU-Ve6">
+            <objects>
+                <viewController title="Session" id="979-Ck-lD2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VRy-7j-G8V"/>
+                        <viewControllerLayoutGuide type="bottom" id="SPo-wv-Qb3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HHN-HD-KdM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Session" id="KiY-eR-x0p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ka5-E3-EBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="761"/>
+        </scene>
+        <!--Current-->
+        <scene sceneID="iDT-DE-HmW">
+            <objects>
+                <viewController id="v6j-Up-QJG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HaO-kC-HMQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="SgL-ZJ-jxg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vQS-QI-WaB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Current" id="Ti5-aW-sXw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ep5-7z-kCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="1509"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="yB6-eH-O7e">
@@ -233,4 +273,7 @@
             <point key="canvasLocation" x="2200" y="-37"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="recipes.png" width="40" height="40"/>
+    </resources>
 </document>
