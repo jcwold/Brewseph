@@ -151,7 +151,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MmB-1d-lFZ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="112" width="600" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="b69-Y1-MdE" detailTextLabel="8wx-Ay-rdH" style="IBUITableViewCellStyleValue1" id="mIH-qv-9SS">
@@ -192,16 +192,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOV-Wo-x0y">
+                                <rect key="frame" x="16" y="74" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r33-wd-2kI">
+                                <rect key="frame" x="16" y="513" width="568" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r33-wd-2kI" firstAttribute="leading" secondItem="LEd-fB-P8j" secondAttribute="leadingMargin" id="5rT-Q6-3VV"/>
                             <constraint firstAttribute="trailing" secondItem="MmB-1d-lFZ" secondAttribute="trailing" id="785-Xu-Q43"/>
                             <constraint firstItem="MmB-1d-lFZ" firstAttribute="leading" secondItem="LEd-fB-P8j" secondAttribute="leading" id="8Qi-ep-KZ5"/>
+                            <constraint firstItem="XOV-Wo-x0y" firstAttribute="leading" secondItem="LEd-fB-P8j" secondAttribute="leadingMargin" id="9og-U2-RcF"/>
+                            <constraint firstItem="r33-wd-2kI" firstAttribute="top" secondItem="MmB-1d-lFZ" secondAttribute="bottom" constant="8" symbolic="YES" id="CsM-YJ-4Hs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r33-wd-2kI" secondAttribute="trailing" id="GBp-SG-TtF"/>
+                            <constraint firstItem="9nf-lV-Yhj" firstAttribute="top" secondItem="r33-wd-2kI" secondAttribute="bottom" constant="8" symbolic="YES" id="IK6-KW-nt1"/>
                             <constraint firstItem="cjR-09-dmg" firstAttribute="leading" secondItem="LEd-fB-P8j" secondAttribute="leading" id="KWv-bb-IDG"/>
                             <constraint firstAttribute="trailing" secondItem="cjR-09-dmg" secondAttribute="trailing" id="Moi-Iu-fca"/>
-                            <constraint firstItem="9nf-lV-Yhj" firstAttribute="top" secondItem="MmB-1d-lFZ" secondAttribute="bottom" id="ZzQ-yd-qDh"/>
-                            <constraint firstItem="MmB-1d-lFZ" firstAttribute="top" secondItem="cjR-09-dmg" secondAttribute="bottom" id="dna-rb-5a8"/>
+                            <constraint firstItem="XOV-Wo-x0y" firstAttribute="top" secondItem="cjR-09-dmg" secondAttribute="bottom" constant="10" id="cUd-gU-ce8"/>
                             <constraint firstItem="cjR-09-dmg" firstAttribute="top" secondItem="l2P-qd-JYi" secondAttribute="bottom" symbolic="YES" id="ggb-q4-UEF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XOV-Wo-x0y" secondAttribute="trailing" id="jzL-oj-OgH"/>
+                            <constraint firstItem="MmB-1d-lFZ" firstAttribute="top" secondItem="XOV-Wo-x0y" secondAttribute="bottom" constant="8" symbolic="YES" id="kwA-hW-7UT"/>
                         </constraints>
                     </view>
                     <connections>
