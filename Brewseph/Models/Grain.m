@@ -2,11 +2,12 @@
 //  Grain.m
 //  Brewseph
 //
-//  Created by Al Wold on 12/29/14.
-//  Copyright (c) 2014 Brewseph World Industries. All rights reserved.
+//  Created by Al Wold on 1/4/15.
+//  Copyright (c) 2015 Brewseph World Industries. All rights reserved.
 //
 
 #import "Grain.h"
+#import "Recipe.h"
 
 
 @implementation Grain

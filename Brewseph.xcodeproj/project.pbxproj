@@ -22,10 +22,10 @@
 		52BE73651A0B25AC006F5595 /* BWRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE73641A0B25AC006F5595 /* BWRecipe.m */; };
 		881918091A524D5A00F84690 /* recipes.png in Resources */ = {isa = PBXBuildFile; fileRef = 881918081A524D5A00F84690 /* recipes.png */; };
 		8819180C1A52587400F84690 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8819180A1A52587400F84690 /* Model.xcdatamodeld */; };
-		881918101A525AC100F84690 /* Grain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8819180F1A525AC100F84690 /* Grain.m */; };
-		881918131A525AC200F84690 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 881918121A525AC200F84690 /* Recipe.m */; };
-		881918161A525AC200F84690 /* Hop.m in Sources */ = {isa = PBXBuildFile; fileRef = 881918151A525AC200F84690 /* Hop.m */; };
-		881918191A525AC200F84690 /* Yeast.m in Sources */ = {isa = PBXBuildFile; fileRef = 881918181A525AC200F84690 /* Yeast.m */; };
+		88F1E4561A5A59CC00BC175B /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F1E4551A5A59CC00BC175B /* Recipe.m */; };
+		88F1E4591A5A59CC00BC175B /* Hop.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F1E4581A5A59CC00BC175B /* Hop.m */; };
+		88F1E45C1A5A59CC00BC175B /* Yeast.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F1E45B1A5A59CC00BC175B /* Yeast.m */; };
+		88F1E45F1A5A59CD00BC175B /* Grain.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F1E45E1A5A59CD00BC175B /* Grain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +66,14 @@
 		52BE73641A0B25AC006F5595 /* BWRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWRecipe.m; sourceTree = "<group>"; };
 		881918081A524D5A00F84690 /* recipes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipes.png; path = Images/recipes.png; sourceTree = "<group>"; };
 		8819180B1A52587400F84690 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		8819180E1A525AC100F84690 /* Grain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grain.h; path = Models/Grain.h; sourceTree = "<group>"; };
-		8819180F1A525AC100F84690 /* Grain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grain.m; path = Models/Grain.m; sourceTree = "<group>"; };
-		881918111A525AC200F84690 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = Models/Recipe.h; sourceTree = "<group>"; };
-		881918121A525AC200F84690 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = Models/Recipe.m; sourceTree = "<group>"; };
-		881918141A525AC200F84690 /* Hop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hop.h; path = Models/Hop.h; sourceTree = "<group>"; };
-		881918151A525AC200F84690 /* Hop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hop.m; path = Models/Hop.m; sourceTree = "<group>"; };
-		881918171A525AC200F84690 /* Yeast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Yeast.h; path = Models/Yeast.h; sourceTree = "<group>"; };
-		881918181A525AC200F84690 /* Yeast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Yeast.m; path = Models/Yeast.m; sourceTree = "<group>"; };
+		88F1E4541A5A59CC00BC175B /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = Models/Recipe.h; sourceTree = "<group>"; };
+		88F1E4551A5A59CC00BC175B /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = Models/Recipe.m; sourceTree = "<group>"; };
+		88F1E4571A5A59CC00BC175B /* Hop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hop.h; path = Models/Hop.h; sourceTree = "<group>"; };
+		88F1E4581A5A59CC00BC175B /* Hop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hop.m; path = Models/Hop.m; sourceTree = "<group>"; };
+		88F1E45A1A5A59CC00BC175B /* Yeast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Yeast.h; path = Models/Yeast.h; sourceTree = "<group>"; };
+		88F1E45B1A5A59CC00BC175B /* Yeast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Yeast.m; path = Models/Yeast.m; sourceTree = "<group>"; };
+		88F1E45D1A5A59CD00BC175B /* Grain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grain.h; path = Models/Grain.h; sourceTree = "<group>"; };
+		88F1E45E1A5A59CD00BC175B /* Grain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grain.m; path = Models/Grain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,14 +179,14 @@
 		8819180D1A525A6000F84690 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				881918171A525AC200F84690 /* Yeast.h */,
-				881918181A525AC200F84690 /* Yeast.m */,
-				881918141A525AC200F84690 /* Hop.h */,
-				881918151A525AC200F84690 /* Hop.m */,
-				881918111A525AC200F84690 /* Recipe.h */,
-				881918121A525AC200F84690 /* Recipe.m */,
-				8819180E1A525AC100F84690 /* Grain.h */,
-				8819180F1A525AC100F84690 /* Grain.m */,
+				88F1E45D1A5A59CD00BC175B /* Grain.h */,
+				88F1E45E1A5A59CD00BC175B /* Grain.m */,
+				88F1E45A1A5A59CC00BC175B /* Yeast.h */,
+				88F1E45B1A5A59CC00BC175B /* Yeast.m */,
+				88F1E4571A5A59CC00BC175B /* Hop.h */,
+				88F1E4581A5A59CC00BC175B /* Hop.m */,
+				88F1E4541A5A59CC00BC175B /* Recipe.h */,
+				88F1E4551A5A59CC00BC175B /* Recipe.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -292,17 +292,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881918191A525AC200F84690 /* Yeast.m in Sources */,
+				88F1E4561A5A59CC00BC175B /* Recipe.m in Sources */,
 				526C2ADA1A300DD500DA7DE4 /* BWGrains.m in Sources */,
 				52BE73621A0B201A006F5595 /* BWRecipeListTableViewController.m in Sources */,
-				881918161A525AC200F84690 /* Hop.m in Sources */,
+				88F1E45C1A5A59CC00BC175B /* Yeast.m in Sources */,
+				88F1E4591A5A59CC00BC175B /* Hop.m in Sources */,
 				52BE73401A0B1992006F5595 /* AppDelegate.m in Sources */,
 				526C2AE01A3D6F3B00DA7DE4 /* BWAddIngredientViewController.m in Sources */,
+				88F1E45F1A5A59CD00BC175B /* Grain.m in Sources */,
 				526C2ADD1A300DE700DA7DE4 /* BWYeast.m in Sources */,
 				526C2AD71A300DC800DA7DE4 /* BWHops.m in Sources */,
 				526C2AD41A3003EE00DA7DE4 /* BWRecipeViewController.m in Sources */,
-				881918131A525AC200F84690 /* Recipe.m in Sources */,
-				881918101A525AC100F84690 /* Grain.m in Sources */,
 				8819180C1A52587400F84690 /* Model.xcdatamodeld in Sources */,
 				52BE73651A0B25AC006F5595 /* BWRecipe.m in Sources */,
 				52BE733D1A0B1992006F5595 /* main.m in Sources */,
