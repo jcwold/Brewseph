@@ -9,6 +9,10 @@
 #import <CoreData/CoreData.h>
 
 #import "AppDelegate.h"
+#import "Recipe.h"
+#import "Grain.h"
+#import "Hop.h"
+#import "Yeast.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // TODO create sample data if empty
+    [self populateSampleDataIfNeeded];
     return YES;
 }
 
@@ -44,6 +48,41 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)populateSampleDataIfNeeded {
+    NSEntityDescription *ed = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    request.entity = ed;
+    NSError *error;
+    NSArray *objects = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (objects.count == 0) {
+        // create sample data
+        NSLog(@"creating sample data");
+        Recipe *recipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:self.managedObjectContext];
+        recipe.name = @"Kolsch";
+        
+        Grain *pale = [NSEntityDescription insertNewObjectForEntityForName:@"Grain" inManagedObjectContext:self.managedObjectContext];
+        Grain *oats = [NSEntityDescription insertNewObjectForEntityForName:@"Grain" inManagedObjectContext:self.managedObjectContext];
+        pale.name = @"Pale";
+        pale.ounces = @(32);
+        pale.recipe = recipe;
+        oats.name = @"Oats";
+        oats.ounces = @(34);
+        oats.recipe = recipe;
+        
+        
+        Hop *centennial = [NSEntityDescription insertNewObjectForEntityForName:@"Hop" inManagedObjectContext:self.managedObjectContext];
+        centennial.name = @"Centennial";
+        centennial.ounces = @(1);
+        centennial.recipe = recipe;
+        
+        Yeast *brewersYeast = [NSEntityDescription insertNewObjectForEntityForName:@"Yeast" inManagedObjectContext:self.managedObjectContext];
+        brewersYeast.name = @"Brewer's Yeast";
+        brewersYeast.recipe = recipe;
+        
+        [self.managedObjectContext save:&error];
+    }
 }
 
 #pragma mark - Core Data stack
