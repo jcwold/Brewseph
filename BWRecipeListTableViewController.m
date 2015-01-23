@@ -6,12 +6,15 @@
 //  Copyright (c) 2014 Brewseph World Industries. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
+
 #import "BWRecipeListTableViewController.h"
 #import "BWRecipe.h"
+#import "AppDelegate.h"
 
 @interface BWRecipeListTableViewController ()
 
-@property (strong, nonatomic) NSMutableArray* recipes;
+@property (strong, nonatomic) NSArray* recipes;
 
 @end
 
@@ -20,16 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.recipes = [[NSMutableArray alloc]init];
-    
-    BWRecipe* recipe1 = [[BWRecipe alloc]init];
-    
-    recipe1.name = @"Stout";
-    recipe1.dateCreated = [[NSDate alloc]init];
-    
-    [self.recipes addObject:recipe1];
-    
-    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    request.entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:moc];
+    NSError *error;
+    self.recipes = [moc executeFetchRequest:request error:&error];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
