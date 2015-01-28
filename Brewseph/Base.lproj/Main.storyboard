@@ -59,6 +59,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zfM-sd-s7L" id="nKi-hp-Zqg">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="rXs-Nm-dAt" kind="show" id="VlP-pf-xbE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -78,6 +81,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recipes" image="recipes.png" id="aKH-0N-X1X"/>
+                    <connections>
+                        <outlet property="tableView" destination="avq-3k-6r6" id="iEh-VQ-q3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDf-WT-Hpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,4 +304,7 @@
     <resources>
         <image name="recipes.png" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VlP-pf-xbE"/>
+    </inferredMetricsTieBreakers>
 </document>

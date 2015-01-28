@@ -7,15 +7,15 @@
 //
 
 #import "BWRecipeViewController.h"
-#import "BWRecipe.h"
-#import "BWGrains.h"
-#import "BWHops.h"
-#import "BWYeast.h"
+#import "Recipe.h"
+#import "Grain.h"
+#import "Hop.h"
+#import "Yeast.h"
 #import "BWAddIngredientViewController.h"
 
 @interface BWRecipeViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) BWRecipe *recipe;
+
 
 
 @end
@@ -28,33 +28,7 @@
     
     self.tableView.dataSource = self;
     
-    self.recipe = [[BWRecipe alloc]init];
-    self.recipe.name = @"Kolsch";
-    self.recipe.grains = [[NSMutableArray alloc] init];
-    self.recipe.hops = [[NSMutableArray alloc]init];
-    self.recipe.yeast = [[NSMutableArray alloc]init];
-    
-    BWGrains *pale = [[BWGrains alloc]init];
-    BWGrains *oats = [[BWGrains alloc]init];
-    pale.name = @"Pale";
-    pale.ounces = 32;
-    oats.name = @"Oats";
-    oats.ounces = 34;
-    
-    
-    BWHops *centennial = [[BWHops alloc]init];
-    centennial.name = @"Centennial";
-    centennial.ounces = 1;
-    
-    BWYeast *brewersYeast = [[BWYeast alloc]init];
-    brewersYeast.name = @"Brewer's Yeast";
-    
-    [self.recipe.grains addObject:pale];
-    [self.recipe.grains addObject:oats];
-    [self.recipe.hops addObject:centennial];
-    [self.recipe.yeast addObject:brewersYeast];
-    
-    
+        
     
     // Do any additional setup after loading the view.
 }
@@ -74,7 +48,7 @@
     
     if (indexPath.section == 0) {
         tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        BWGrains *currentGrain = [[BWGrains alloc]init];
+        Grain *currentGrain;
         currentGrain = [self.recipe.grains objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentGrain.name;
         tableCell.detailTextLabel.text = [self formatGrainWeight:currentGrain.ounces];
@@ -82,7 +56,7 @@
     
     else if (indexPath.section == 1) {
         tableCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-        BWHops *currentHop = [[BWHops alloc]init];
+        Hop *currentHop;
         currentHop = [self.recipe.hops objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentHop.name;
         tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%f oz", currentHop.ounces];
@@ -90,8 +64,8 @@
     
     else if (indexPath.section == 2) {
         tableCell =[self.tableView dequeueReusableCellWithIdentifier:@"yeastCell" forIndexPath:indexPath];
-        BWYeast *currentYeast = [[BWYeast alloc]init];
-        currentYeast = [self.recipe.yeast objectAtIndex:indexPath.row];
+        Yeast *currentYeast;
+        currentYeast = [self.recipe.yeasts objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentYeast.name;
     }
     
@@ -152,7 +126,7 @@
         return [self.recipe.hops count];
     }
     else {
-        return [self.recipe.yeast count];
+        return [self.recipe.yeasts count];
     }
     
 }

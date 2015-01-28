@@ -11,10 +11,12 @@
 #import "BWRecipeListTableViewController.h"
 #import "BWRecipe.h"
 #import "AppDelegate.h"
+#import "BWRecipeViewController.h"
 
 @interface BWRecipeListTableViewController ()
 
 @property (strong, nonatomic) NSArray* recipes;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -56,6 +58,21 @@
     
     
     return [self.recipes count];
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSLog(@"%@", sender);
+    
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        UITableViewCell *cell = sender;
+        NSIndexPath *cellIndex;
+        cellIndex = [self.tableView indexPathForCell:cell];
+        BWRecipeViewController *vc = [segue destinationViewController];
+        vc.recipe = [self.recipes objectAtIndex:cellIndex.row];
+    }
+    
+    
 }
 
 - (IBAction)addPressed:(id)sender {

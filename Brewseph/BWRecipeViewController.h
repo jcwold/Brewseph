@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recipe.h"
 
 @interface BWRecipeViewController : UIViewController <UITableViewDataSource, UIActionSheetDelegate>
-
+@property (strong, nonatomic) Recipe *recipe;
 
 @end
