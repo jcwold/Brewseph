@@ -51,7 +51,7 @@
         Grain *currentGrain;
         currentGrain = [self.recipe.grains objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentGrain.name;
-        tableCell.detailTextLabel.text = [self formatGrainWeight:currentGrain.ounces];
+        tableCell.detailTextLabel.text = [self formatGrainWeight:[currentGrain.ounces intValue]];
     }
     
     else if (indexPath.section == 1) {
@@ -59,7 +59,7 @@
         Hop *currentHop;
         currentHop = [self.recipe.hops objectAtIndex:indexPath.row];
         tableCell.textLabel.text = currentHop.name;
-        tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%f oz", currentHop.ounces];
+        tableCell.detailTextLabel.text = [NSString stringWithFormat:@"%f oz", [currentHop.ounces floatValue]];
     }
     
     else if (indexPath.section == 2) {
