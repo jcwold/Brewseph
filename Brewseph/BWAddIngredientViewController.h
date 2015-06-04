@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BWRecipe.h"
+#import "Recipe.h"
 
 @interface BWAddIngredientViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UIPickerView *ouncesPicker;
 @property (strong, nonatomic) IBOutlet UINavigationItem *addIngredientTitle;
-@property (strong, nonatomic) BWRecipe *recipe;
+@property (strong, nonatomic) Recipe *recipe;
 @property (strong, nonatomic) NSString *type;
 
 

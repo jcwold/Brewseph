@@ -7,15 +7,16 @@
 //
 
 #import "BWAddIngredientViewController.h"
-#import "BWGrains.h"
-#import "BWHops.h"
-#import "BWYeast.h"
+#import "Grain.h"
+#import "Hop.h"
+#import "Yeast.h"
+#import "AppDelegate.h"
 
 @interface BWAddIngredientViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
-@property (strong, nonatomic) BWGrains *grain;
-@property (strong, nonatomic) BWHops *hop;
-@property (strong, nonatomic) BWYeast *yeast;
+@property (strong, nonatomic) Grain *grain;
+@property (strong, nonatomic) Hop *hop;
+@property (strong, nonatomic) Yeast *yeast;
 @property (strong, nonatomic) NSMutableArray *fractionSymbols;
 @property (strong, nonatomic) NSMutableArray *fractions;
 @property (strong, nonatomic) NSMutableArray *ounces;
@@ -32,9 +33,6 @@
         self.ouncesPicker.hidden = YES;
     }
     
-    self.grain = [[BWGrains alloc]init];
-    self.hop = [[BWHops alloc]init];
-    self.yeast = [[BWYeast alloc]init];
     self.pounds = [[NSMutableArray alloc] initWithObjects:@1,@2,@3,@4,@5,@6,@7,@8,@9,@10, @11, @12, @13,@14, @15,@16,@17,@18,@19,@20, nil];
     self.ounces = [[NSMutableArray alloc] initWithObjects: @1,@2,@3,@4,@5,@6,@7,@8,@9,@10,@11,@12,@13,@14,@15,@16, nil];
     self.fractionSymbols = [[NSMutableArray alloc] initWithObjects:@"0", [NSString stringWithFormat:@"%C",0x00215b], [NSString stringWithFormat:@"%C",0x002153],[NSString stringWithFormat:@"%C",0x00bc],[NSString stringWithFormat:@"%C",0x00bd],[NSString stringWithFormat:@"%C",0x002154],[NSString stringWithFormat:@"%C",0x00be], nil];
@@ -103,29 +101,36 @@
     NSInteger pickerSelection = 0;
     NSInteger componentTwo = 0;
     
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.managedObjectContext;
+     NSError *error;
+    
     if ([self.type isEqual:@"Grain"]) {
-        
+       
+        self.grain = [NSEntityDescription insertNewObjectForEntityForName:@"Grain" inManagedObjectContext:moc];
         self.grain.name = self.nameTextField.text;
         pickerSelection = [self.ouncesPicker selectedRowInComponent:0];
         componentTwo = [self.ouncesPicker selectedRowInComponent:1];
-        self.grain.ounces = [[self.pounds objectAtIndex:pickerSelection] intValue]*16 + [[self.ounces objectAtIndex:componentTwo] intValue];
-        [self.recipe.grains addObject:self.grain];
+        self.grain.ounces = @([[self.pounds objectAtIndex:pickerSelection] intValue]*16 + [[self.ounces objectAtIndex:componentTwo] intValue]);
+        self.grain.recipe = self.recipe;
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
     else if ([self.type isEqual:@"Hop"]) {
+        self.hop = [NSEntityDescription insertNewObjectForEntityForName:@"Hop" inManagedObjectContext:moc];
         self.hop.name = self.nameTextField.text;
         pickerSelection = [self.ouncesPicker selectedRowInComponent:0];
         componentTwo = [self.ouncesPicker selectedRowInComponent:1];
-        self.hop.ounces = [[self.ounces objectAtIndex:pickerSelection] floatValue] + [[self.fractions objectAtIndex:componentTwo] floatValue];
-        [self.recipe.hops addObject:self.hop];
+        self.hop.ounces = @([[self.ounces objectAtIndex:pickerSelection] floatValue] + [[self.fractions objectAtIndex:componentTwo] floatValue]);
+        self.hop.recipe = self.recipe;
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
     else if ([self.type isEqual:@"Yeast" ]) {
+        self.yeast = [NSEntityDescription insertNewObjectForEntityForName:@"Yeast" inManagedObjectContext:moc];
         self.yeast.name = self.nameTextField.text;
-        [self.recipe.yeast addObject:self.yeast];
+        self.yeast.recipe = self.recipe;
         [self dismissViewControllerAnimated:YES completion:^{}];
     }
-    
+    [moc save:&error];
 }
 - (IBAction)cancelPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{}];
