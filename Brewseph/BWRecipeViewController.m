@@ -12,9 +12,11 @@
 #import "Hop.h"
 #import "Yeast.h"
 #import "BWAddIngredientViewController.h"
+#import "AppDelegate.h"
 
 @interface BWRecipeViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 
 
 
@@ -25,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"ViewDidLoad");
-    
+    self.titleTextField.text = self.recipe.name;
     self.tableView.dataSource = self;
     
         
@@ -163,6 +165,18 @@
 - (IBAction)cancelPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{}];
 
+}
+
+
+- (IBAction)savePressed:(id)sender {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.managedObjectContext;
+    self.recipe.name = self.titleTextField.text;
+    NSError *error;
+    [moc save:&error];
+    
+    [self dismissViewControllerAnimated:YES completion:^{}];
+    
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
