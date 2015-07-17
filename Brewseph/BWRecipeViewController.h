@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Recipe.h"
 
-@interface BWRecipeViewController : UIViewController <UITableViewDataSource, UIActionSheetDelegate>
+@interface BWRecipeViewController : UIViewController <UITableViewDataSource, UIActionSheetDelegate, UITableViewDelegate>
 @property (strong, nonatomic) Recipe *recipe;
 @property (nonatomic) BOOL isNew;
 

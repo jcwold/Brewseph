@@ -25,18 +25,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *moc = appDelegate.managedObjectContext;
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    request.entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:moc];
-    NSError *error;
-    self.recipes = [moc executeFetchRequest:request error:&error];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *moc = appDelegate.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    request.entity = [NSEntityDescription entityForName:@"Recipe" inManagedObjectContext:moc];
+    NSError *error;
+    self.recipes = [moc executeFetchRequest:request error:&error];
+    [self.tableView reloadData];
+    
+    
+}
+    
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -30,6 +30,7 @@
     NSLog(@"ViewDidLoad");
     self.titleTextField.text = self.recipe.name;
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
     if (self.isNew) {
         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
@@ -199,6 +200,16 @@
     }
 
 }
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"edit style = %ld",editingStyle);
+    NSLog(@"index path = %@", indexPath);
+}
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
 
 
 @end
