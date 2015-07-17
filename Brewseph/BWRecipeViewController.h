@@ -11,5 +11,6 @@
 
 @interface BWRecipeViewController : UIViewController <UITableViewDataSource, UIActionSheetDelegate>
 @property (strong, nonatomic) Recipe *recipe;
+@property (nonatomic) BOOL isNew;
 
 @end

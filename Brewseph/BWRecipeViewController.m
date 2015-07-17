@@ -20,16 +20,24 @@
 
 
 
+
 @end
 
 @implementation BWRecipeViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
     NSLog(@"ViewDidLoad");
     self.titleTextField.text = self.recipe.name;
     self.tableView.dataSource = self;
     
+    if (self.isNew) {
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        NSManagedObjectContext *moc = appDelegate.managedObjectContext;
+        self.recipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe" inManagedObjectContext:moc];
+    }
+    
+    NSLog(@"%@",self.title);
         
     
     // Do any additional setup after loading the view.
@@ -37,6 +45,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
+    
+    
 }
 
 

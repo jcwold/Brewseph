@@ -64,12 +64,22 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSLog(@"%@", sender);
     
+    BWRecipeViewController *vc = [segue destinationViewController];
+    
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         UITableViewCell *cell = sender;
         NSIndexPath *cellIndex;
         cellIndex = [self.tableView indexPathForCell:cell];
-        BWRecipeViewController *vc = [segue destinationViewController];
         vc.recipe = [self.recipes objectAtIndex:cellIndex.row];
+        vc.isNew = NO;
+        NSLog(@"Recipe has been set");
+        vc.title = @"Edit Recipe";
+    }
+    
+    else {
+        
+        vc.isNew = YES;
+        vc.title = @"Add Recipe";
     }
     
     
